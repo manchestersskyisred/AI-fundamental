@@ -14,6 +14,7 @@ def generate_new_states(state):
             new_state[pos0], new_state[new_pos] = new_state[new_pos], new_state[pos0]
             new_states.append(tuple(new_state))
     return new_states
+
 def dfs(state, cnt=0):
     if state == goal:
         return cnt 
@@ -22,8 +23,8 @@ def dfs(state, cnt=0):
     while q:
         state, cnt = q.popleft()
         if state in visited_states:
-            continue #如果状态已访问过就跳过
-        visited_states.add(state) #标记当前状态为已访问
+            continue 
+        visited_states.add(state)
         for new_state in generate_new_states(state): #遍历所有可能的新状态
             if new_state == goal:
                 return cnt + 1  # 如果新状态是目标状态，返回深度+1
