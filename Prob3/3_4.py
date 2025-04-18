@@ -1,3 +1,4 @@
+
 import heapq
 from maze_visualization import visualize_maze_with_path
 
@@ -8,7 +9,7 @@ def next_positions(maze, position):
 
     rows, cols = len(maze), len(maze[0])
     row, col = position
-    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]  # 上、下、左、右
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]  
     neighbors = []
     
     for dr, dc in directions:
